@@ -1,0 +1,17 @@
+curl https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql \
+-H "Content-Type: application/graphql" \
+-d @- << DATA
+{
+  stop(id: "HSL:1040129") {
+    name
+    lat
+    lon
+    wheelchairBoarding
+  }
+}
+DATA
+
+
+
+above works. also in bash. postman :
+chrome://apps

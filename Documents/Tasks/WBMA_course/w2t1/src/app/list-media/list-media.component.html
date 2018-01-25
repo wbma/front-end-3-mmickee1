@@ -1,0 +1,26 @@
+<p>
+  {{ printThis }}
+</p>
+
+<!--
+<input [(ngModel)]="stopName">
+<button (click)="getStopName()">Get routes</button> -->
+
+<div *ngFor="let stop of stopArray">
+  <h3> {{stop.name}} </h3>
+  <ul>
+    <li *ngFor="let line of stop.patterns">
+      <p> {{ line.shortName }} </p>
+    </li>
+  </ul>
+</div>
+
+<div>
+  <ul>
+    <li *ngFor="let media of mediaArray">
+      <img [src]="mediaService.uploadUrl + media.thumbnail">
+      <h4>{{media.title}}</h4>
+      <p>{{media.description}}</p>
+    </li>
+  </ul>
+</div>
